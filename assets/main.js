@@ -5,10 +5,20 @@ console.log(list_email);
 // Chiedere all'utente il suo indirizzo email e verificare se è nella lista (tramite un ciclo for).
 
 var tuo_email = prompt("Inserire il tuo email");
-console.log(tuo_email);
+console.log("hai inserito " + tuo_email);
 for (var i = 0; i < list_email.length; i++) {
-    list_email[i]
+    // console.log(list_email[i]);
+    if (tuo_email == list_email[i]) {
+        console.log("complimenti sei nella lista");
+        document.getElementById('welcome').innerHTML = "Welcome"
+    }
+    else {
+        console.log("Sorry, non sei nella lista");
+        document.getElementById('welcome').innerHTML = "Sorry you are not in"
+    }
 }
-// Comunicare quindi un messaggio appropriato (sei in lista/non sei in lista)
 
-}
+
+
+
+// Comunicare quindi un messaggio appropriato (sei in lista/non sei in lista)
